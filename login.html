@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD><TITLE> ROOM ALLOCATION SYSTEM - LOGIN PAGE</TITLE>
+  <script type="text/javascript">
+function formValidator()
+{
+var elem,helperMsg; 
+	var uname = document.getElementById('t1');
+	var pass = document.getElementById('t2');
+   if(isValid(uname, "Please Enter user name")){
+   if(isValid(pass, "Please Enter password")){
+return true;
+}
+}
+return false;
+}
+function isValid(elem,helperMsg)
+{
+if(elem.value==""||elem.value=='null')
+{
+alert(helperMsg);
+elem.focus();
+return false;
+} 
+else
+{
+return true;
+}
+}
+</script>
+
+</head>
+
+ <BODY background=abc.jpg>
+<div align="center">
+<font  size=9 face="Algerian" color=rose>
+ Room Allocation System<img src="logo.jpg">
+</font><br>
+<font size=5 face="Bell MT" color=rose><U>
+International Institute of Information Technology, Bangalore
+</U></font>
+<div align=right><font size=4 face="TimesNewRoman" color=blue><a href="MainPage.html" target="_top">Home</a></font></div>
+<form method="post" onsubmit="return formValidator()" name="f1" action="loginCheckUp.jsp">
+<fieldset>
+<legend align="left"><b>Authentication CheckUP</b> </legend>
+<table>
+ <tr align="left"><td>User ID:</td><td> <input type="text" name="userid" id="t1" value="" size=15></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password" id="t2" value="" size=15></td></tr>
+</table>
+ <input type="submit" name="login" value="login" >
+</fieldset>
+</form>
+</div>
+
+ </BODY>
+</HTML>
